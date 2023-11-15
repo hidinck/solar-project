@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Savings Calculator</title>
+    <link rel="stylesheet" href="solar_calculator.css">
+</head>
+<body>
+    <h1>Solar Savings Calculator</h1>
+    <form id="savingsForm">
+        <label for="energyConsumption">Enter your energy consumption bill in ₹:</label>
+        <input type="number" id="energyConsumption" placeholder="Enter the amount" required>
+
+        <label for="solarPanelCost">Cost of Solar Panel (₹):</label>
+        <input type="number" id="solarPanelCost" placeholder="Enter the cost" required>
+
+        <label for="savingsPercentage">Estimated Savings Percentage (%):</label>
+        <input type="number" id="savingsPercentage" placeholder="Amount of % saving" required>
+
+        <!-- Changed type from "button" to "submit" for better accessibility -->
+        <button type="button" onclick="calculateSavings()">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+    <div class="home"><a href="home.html">BACK TO HOME</a> </div>
+
+    <script>
+        function calculateSavings() {
+            var energyConsumption = parseFloat(document.getElementById("energyConsumption").value);
+            var solarPanelCost = parseFloat(document.getElementById("solarPanelCost").value);
+            var savingsPercentage = parseFloat(document.getElementById("savingsPercentage").value);
+            var monthlySavings = (energyConsumption * savingsPercentage) / 100;
+            var paybackPeriodMonths = solarPanelCost / monthlySavings;
+            var resultElement = document.getElementById("result");
+
+            // Use template literals for better readability
+            resultElement.innerHTML = `
+                <p>Based on your energy consumption bill of ₹${energyConsumption.toFixed(2)},</p>
+                <p>it is recommended that you install a solar panel.</p>
+                <p>By doing so, you can save approximately ₹${monthlySavings.toFixed(2)} per month.</p>
+                <p>The payback period for the solar panel installation is approximately ${paybackPeriodMonths.toFixed(2)} months.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
+
+
+

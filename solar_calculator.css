@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-image: url("solar-panel-calulator.jpg"); 
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #000;
+    font-size:60px;
+    font-weight:800;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffffc2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #ffffffc2;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffffcb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+p {
+    margin: 0 0 10px;
+    color: #333;
+    font-weight:600;
+}
+.home {
+    text-align:center;
+    /* margin-left:30px; */
+    font-size:25px;
+    text-decoration:2px underline solid white;
+    margin-top:150px;
+
+    /* justify-items: left; */
+}
+a {
+    color:white;
+    text-decoration:2px solid  underlined white;
+}
